@@ -1,0 +1,7 @@
+FROM bitnami/spark:3.5.0
+
+# Copie du script Spark
+COPY spark_transform.py /app/spark_transform.py
+
+# Commande par défaut
+CMD ["/opt/bitnami/spark/bin/spark-submit", "--master", "spark://spark:7077", "/app/spark_transform.py"]

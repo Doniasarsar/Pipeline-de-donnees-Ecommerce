@@ -1,0 +1,16 @@
+FROM python:3.9-slim
+
+# Définit le répertoire de travail
+WORKDIR /app
+
+# Copie le fichier requirements.txt
+COPY requirements.txt .
+
+# Installation des dépendances
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copie les fichiers de l'application
+COPY . .
+
+# Commande par défaut
+CMD ["python", "ecommerce-consumer.py"]

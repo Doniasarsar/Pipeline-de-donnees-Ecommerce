@@ -1,0 +1,7 @@
+requests
+confluent-kafka
+faker
+pyspark
+cassandra-driver
+jsonschema
+elasticsearch
